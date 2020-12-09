@@ -1,6 +1,7 @@
 import React from 'react';
 import APropos from './components/APropos';
 import NavBar from './components/NavBar'
+import Parcours from './components/Parcours';
 
 const App: React.FC = () => {
   return (
@@ -9,6 +10,7 @@ const App: React.FC = () => {
       <NavBar />
       <div className="content">
         <APropos />
+        <Parcours />
       </div>
     </div>
   )
