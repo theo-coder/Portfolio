@@ -108,6 +108,9 @@ html {
   list-style: none;
   margin-bottom: 14px;
 }
+#aPropos .react-floater-animated {
+  display: none;
+}
 #aPropos > ul > li::before {
   content: "";
   padding-right: 10px;
@@ -134,6 +137,7 @@ html {
 .typing {
   display: none;
 }
+
 @media screen and (min-width: 1100px) {
   .navBar {
     background-color: #15151550;
@@ -153,7 +157,42 @@ html {
     text-shadow: 1px 1px 2px black;
   }
   .type {
-    display: flex;
     font-size: 30px;
+  }
+  .content {
+    border-left: 370px solid #151515;
+  }
+  .content > div {
+    padding: 30px 100px 50px 100px;
+  }
+
+  #aPropos > ul > li {
+    white-space: nowrap;
+    overflow: shown;
+  }
+  #aPropos img {
+    transform: translateY(-400px);
+    width: 450px;
+  }
+  #aPropos .react-floater-animated {
+    display: block;
+    position: absolute;
+    right: 0;
+  }
+}
+@media screen and (min-width: 1300px) {
+  #aPropos > ul {
+    transform: translateX(-50px);
+    columns: 2;
+    max-width: 850px;
+  }
+  .content > div {
+    padding: 30px 200px 150px 200px;
+  }
+  #aPropos img {
+    transform: translateY(-120px);
+  }
+  #aPropos .react-floater-animated {
+    right: 0;
   }
 }

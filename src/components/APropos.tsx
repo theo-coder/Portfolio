@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactFloaterJs from 'react-floaterjs';
 
 const APropos: React.FC = () => {
     return(
@@ -24,6 +25,9 @@ const APropos: React.FC = () => {
                 <li><strong>Email :</strong> theo@posty.fr</li>
                 <li><strong>Freelance :</strong> Disponible</li>
             </ul>
+            <ReactFloaterJs className="imgContainer">
+                <img src="./images/computer.png" alt="computer"/>
+            </ReactFloaterJs>
         </div>
     )
 }
