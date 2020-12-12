@@ -14,6 +14,14 @@ const Parcours: React.FC = () => {
                 spaceBetween={50}
                 slidesPerView={3}
                 pagination={{ clickable: true }}
+                style={{overflow: 'visible'}}
+                breakpoints={{
+                    // when window width is >= 768px
+                    768: {
+                      width: 768,
+                      slidesPerView: 5,
+                    },
+                  }}
             >
                 <SwiperSlide><img src="./images/html.png" alt="html" /></SwiperSlide>
                 <SwiperSlide><img src="./images/css.png" alt="css" /></SwiperSlide>
