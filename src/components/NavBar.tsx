@@ -20,7 +20,7 @@ const NavBar: React.FC<Props> = () => {
             <hr />
             <ul>
                 <li><a href="#aPropos">A propos</a></li>
-                <li><a href="#competences">Parcours</a></li>
+                <li><a href="#parcours">Parcours</a></li>
                 <li><a href="#top">Portfolio</a></li>
                 <li><a href="#top">Service</a></li>
                 <li><a href="#top">Contact</a></li>

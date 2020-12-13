@@ -121,6 +121,71 @@ html {
   width: 25px;
   background: url("./images/arrow.svg") no-repeat center center / contain;
 }
+#parcours h2 {
+  padding: 15px 0;
+  font-size: 28px;
+}
+#parcours li {
+  list-style: none;
+  padding-bottom: 10px;
+}
+#parcours h4 {
+  font-size: 26px;
+  font-weight: 500;
+}
+/* #parcours ul {
+  border-left: 3px solid #151515;
+  padding-left: 10px;
+} */
+#parcours ul li {
+  position: relative;
+  padding-left: 25px;
+}
+#parcours ul li > span:nth-child(1) {
+  content: "";
+  display: block;
+  width: 0;
+  top: 15px;
+  left: 0;
+  height: 100%;
+  border: 2px solid #151515;
+  position: absolute;
+}
+#parcours ul li:last-child > span:nth-child(1) {
+  height: calc(100% - 20px);
+}
+#parcours ul li > span:nth-child(1)::before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #f3fdff;
+  border: 3px solid #151515;
+  position: absolute;
+  left: -8px;
+  top: -10px;
+}
+#parcours ul li > span:nth-child(3) {
+  display: inline-block;
+  padding: 7px 14px;
+  margin: 8px 0;
+  background: #aec0ff;
+}
+#parcours ul li p {
+  color: #414141;
+  margin-bottom: 5px;
+}
+/* #parcours ul li::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #f3fdff;
+  border-radius: 50%;
+  border: 3px solid #151515;
+  transform: translateX(-19.5px) translateY(7px);
+} */
 
 /*
 * Override
