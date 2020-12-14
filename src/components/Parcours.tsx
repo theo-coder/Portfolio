@@ -16,16 +16,6 @@ const parcoursList = {
             place: 'Lycée Victor Hugo, Besançon'
         },
     ],
-    Formations_en_ligne : [
-        {
-            title: 'OpenClassrooms',
-            description: 'Html Css - Web - Git Github - Algorithmes - Javascript'
-        },
-        {
-            title: 'Grafikart',
-            description: 'Html - Css - Hebergement'
-        }
-    ],
     Expérience: [
         {
             title: 'Sapeur-pompier volontaire',
@@ -50,6 +40,16 @@ const parcoursList = {
             description: 'Participation à BattleDev HelloWork',
             date: '11/19 - 03/20'
         },
+    ],
+    Formations_en_ligne : [
+        {
+            title: 'OpenClassrooms',
+            description: 'Html Css - Web - Git Github - Algorithmes - Javascript'
+        },
+        {
+            title: 'Grafikart',
+            description: 'Html - Css - Hebergement'
+        }
     ]
 }
 
@@ -70,7 +70,9 @@ const Parcours = () => {
     return (
         <div id="parcours">
             <h1>Parcours</h1>
-            {items}
+            <div>
+                {items}
+            </div>
         </div>
     )
 }

@@ -10,9 +10,9 @@ const ParcoursItem: React.FC<Props> = ({content}) => {
         <>
             <span></span>
             <h4>{content.title}</h4>
-            {content.date && <span>{content.date}</span>}
+            {content.date && <span className="date">{content.date}</span>}
             {content.subtitle && <p><em>{content.subtitle}</em></p>}
-            <p>{content.description.split('<br/>').map((i, key) => <div key={key}>{i}</div>)}</p>
+            <span>{content.description.split('<br/>').map((i, key) => <div key={key}>{i}</div>)}</span>
             {content.place && <p><span role="img" aria-label="pin">📌</span> {content.place}</p>}
         </>
     )

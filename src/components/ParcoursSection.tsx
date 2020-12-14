@@ -20,12 +20,12 @@ const ParcoursSection: React.FC<Props> = ({title, content}) => {
     }
 
     return (
-        <>
+        <div>
             <h2>{title.replaceAll('_', ' ')}</h2>
             <ul>
                 {items}
             </ul>
-        </>
+        </div>
     )
 }
 
