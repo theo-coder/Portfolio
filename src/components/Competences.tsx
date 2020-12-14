@@ -13,6 +13,8 @@ const Parcours: React.FC = () => {
             <Swiper
                 spaceBetween={50}
                 slidesPerView={3}
+                loop={true}
+                loopAdditionalSlides={10}
                 pagination={{ clickable: true }}
                 style={{overflow: 'visible'}}
                 breakpoints={{
