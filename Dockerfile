@@ -1,12 +1,8 @@
-FROM node:15.5.0
+FROM node:14.13.1
 
 WORKDIR /app
 
-COPY . ./
-
-RUN yarn install
-RUN echo "deb http://ftp.us.debian.org/debian testing main contrib non-free" >> /etc/apt/sources.list
-RUN apt update
-RUN apt install build-essential -y
+RUN yarn install --silent
+RUN yarn global add react-scripts
 
 CMD ["yarn", "start"]
