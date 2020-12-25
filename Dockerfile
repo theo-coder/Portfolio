@@ -1,7 +1,13 @@
-FROM node:14.13.1
+FROM node
 
-WORKDIR /app
+#WORKDIR /app
 
-RUN yarn global add react-scripts
+#COPY package.json yarn.lock ./
 
-CMD ["yarn", "start"]
+#RUN yarn && yarn global add react-scripts
+
+#COPY . .
+
+#VOLUME ["/app"]
+
+#CMD ["yarn", "start"]
