@@ -1,10 +1,10 @@
 import React from 'react';
 import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/swiper.scss';
-import 'swiper/components/navigation/navigation.scss';
-import 'swiper/components/pagination/pagination.scss';
-import 'swiper/components/scrollbar/scrollbar.scss';
+import 'swiper/swiper-bundle.min.css';
+import 'swiper/components/navigation/navigation.min.css';
+import 'swiper/components/pagination/pagination.min.css';
+import 'swiper/components/scrollbar/scrollbar.min.css';
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 const Parcours: React.FC = () => {
     return (
@@ -16,14 +16,14 @@ const Parcours: React.FC = () => {
                 loop={true}
                 loopAdditionalSlides={10}
                 pagination={{ clickable: true }}
-                style={{overflow: 'visible'}}
+                style={{ overflow: 'visible' }}
                 breakpoints={{
                     // when window width is >= 768px
                     768: {
-                      width: 768,
-                      slidesPerView: 5,
+                        width: 768,
+                        slidesPerView: 5,
                     },
-                  }}
+                }}
             >
                 <SwiperSlide><img src="./images/html.png" alt="html" /></SwiperSlide>
                 <SwiperSlide><img src="./images/css.png" alt="css" /></SwiperSlide>
