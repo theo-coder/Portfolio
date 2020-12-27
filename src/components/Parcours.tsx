@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import ParcoursSection from './ParcoursSection'
 
 const parcoursList = {
-    Formations : [
+    Formations: [
         {
             title: 'BTS SIO',
             date: '2019 - Aujourd\'hui',
@@ -41,7 +41,7 @@ const parcoursList = {
             date: '11/19 - 03/20'
         },
     ],
-    Formations_en_ligne : [
+    Formations_en_ligne: [
         {
             title: 'OpenClassrooms',
             description: 'Html Css - Web - Git Github - Algorithmes - Javascript'
@@ -53,26 +53,104 @@ const parcoursList = {
     ]
 }
 
+
+
 const Parcours = () => {
 
-    const items = []
 
-    for(let i=0;i< Object.entries(parcoursList).length;i++){
-        items.push(
-            <ParcoursSection
-                key={i}
-                title={Object.entries(parcoursList)[i][0]}
-                content={Object.entries(parcoursList)[i][1]}
-            />
+    /**
+     * Sorter
+     */
+
+    const layout = (columnCount: Number) => (items: any) => items.reduce((columns: any, item: any) => {
+        const [firstColumn, ...rest] = columns
+
+        const [column, index] = rest.reduce(([min, minIndex]: any, column: any, index: any) =>
+            column.height < min.height ?
+
+                [column, index + 1] :
+                [min, minIndex]
+            ,
+            [firstColumn, 0]
+        )
+
+        const newColumn = {
+            ...column,
+            items: [...column.items, item],
+            height: column.height + item.height
+        }
+
+        const before = columns.slice(0, index)
+        const after = columns.slice(index + 1)
+
+        return [...before, newColumn, ...after]
+    },
+        [...Array(columnCount)].map(x => ({ items: [], height: 0 }))
+    )
+
+    const styles = {
+        flexContainer: {
+            display: 'flex'
+        },
+        flexColumn: {
+            flex: 1
+        }
+    }
+
+    const Layout = (columnCount: any) => (children: any) => {
+        const laidOut = layout(columnCount)(children.map((child: any, index: any) => ({
+            component: child,
+            height: hgt[index]
+        })))
+
+        return (
+            <div style={styles.flexContainer}>
+                {laidOut.map((column: any, columnIndex: any) =>
+                    <div key={columnIndex} style={styles.flexColumn}>
+                        {column.items.map((child: any, childIndex: any) =>
+                            <div key={childIndex}>
+                                {child.component}
+                            </div>
+                        )}
+                    </div>
+                )}
+            </div>
         )
     }
-    
+
+    const Grid = ({ columnCount, children }: any) => Layout(columnCount)(children)
+
+    /**
+     * EndSorte
+     */
+
+    const [hgt, setHgt]: any = useState([])
+    const [width, setWidth]: any = useState(window.innerWidth);
+    const breakpoint: Number = 1100;
+
+    useEffect(() => {
+        window.addEventListener('resize', () => setWidth(window.innerWidth))
+    }, [])
+
     return (
         <div id="parcours">
             <h1>Parcours</h1>
-            <div>
-                {items}
-            </div>
+            <Grid columnCount={width < breakpoint ? 1 : 2}>
+                {Object.entries(parcoursList).map((item, itemIndex) => {
+                    return (
+                        <ParcoursSection
+                            key={itemIndex}
+                            title={item[0]}
+                            content={item[1]}
+                            onGetHeight={(height: any) => {
+                                if (!hgt.includes(height)) {
+                                    setHgt([...hgt, height])
+                                }
+                            }}
+                        />
+                    )
+                })}
+            </Grid>
         </div>
     )
 }
