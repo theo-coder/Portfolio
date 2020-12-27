@@ -21,7 +21,7 @@ const NavBar: React.FC<Props> = () => {
             <ul>
                 <li><a href="#aPropos">A propos</a></li>
                 <li><a href="#parcours">Parcours</a></li>
-                <li><a href="#top">Portfolio</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#top">Service</a></li>
                 <li><a href="#top">Contact</a></li>
             </ul>

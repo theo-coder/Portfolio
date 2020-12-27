@@ -14,6 +14,7 @@ const Parcours: React.FC = () => {
                 spaceBetween={50}
                 slidesPerView={3}
                 loop={true}
+                navigation
                 loopAdditionalSlides={10}
                 pagination={{ clickable: true }}
                 style={{ overflow: 'visible' }}

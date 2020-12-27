@@ -121,6 +121,9 @@ html {
   width: 25px;
   background: url("./images/arrow.svg") no-repeat center center / contain;
 }
+#parcours {
+  padding-bottom: 30px;
+}
 #parcours h2 {
   padding: 15px 0;
   font-size: 28px;
@@ -129,7 +132,7 @@ html {
   list-style: none;
   padding-bottom: 10px;
 }
-#parcours h4 {
+#parcours h3 {
   font-size: 26px;
   font-weight: 500;
 }
@@ -188,6 +191,45 @@ html {
   transform: translateX(-19.5px) translateY(7px);
 } */
 
+.portfolioItem {
+  height: 275px;
+  width: 275px;
+  background: url("https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png")
+    center center / cover;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  text-align: center;
+  text-transform: uppercase;
+}
+.portfolioItem > div {
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  font-size: 15px;
+  word-break: keep-all;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  text-decoration: none;
+}
+#portfolio > div {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+#portfolio {
+  padding-right: 30px;
+}
+#portfolio .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+#portfolio a {
+  text-decoration: none;
+  color: #f3fdffdc;
+}
+
 /*
 * Override
 */
@@ -205,7 +247,38 @@ html {
 .typing {
   display: none;
 }
+.swiper-button-next,
+.swiper-button-prev {
+  display: none !important;
+  color: #f3fdff !important;
+  top: 150px !important;
+  justify-content: space-around !important;
+  align-items: space-around !important;
+  padding: 5px 200px;
+}
+.swiper-button-next {
+  right: -100px !important;
+}
+.swiper-button-prev {
+  left: -100px !important;
+}
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 20px !important;
+}
 @media screen and (min-width: 1100px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: flex !important;
+  }
+  .portfolioItem > div {
+    display: none;
+  }
+  .portfolioItem:hover > div {
+    display: block;
+    animation: fadeIn 0.5s;
+    -webkit-animation: fadeIn 0.3s;
+  }
   .navBar {
     background-color: #15151550;
     width: 370px;
@@ -251,6 +324,33 @@ html {
   }
   .swiper-container {
     transform: translateX(-100px);
+  }
+}
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #portfolio > div {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 1480px) {
+  #portfolio > div {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 @media screen and (min-width: 1300px) {
