@@ -229,6 +229,29 @@ html {
   text-decoration: none;
   color: #f3fdffdc;
 }
+#services > div {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+#services > div > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#services > div > div > img {
+  background-color: #00c2ff;
+  padding: 30px;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  margin-bottom: 10px;
+}
+#services span {
+  font-size: 22px;
+  text-align: center;
+  max-width: 200px;
+}
 
 /*
 * Override

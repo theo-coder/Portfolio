@@ -5,6 +5,7 @@ import Competences from './components/Competences';
 import Parcours from './components/Parcours';
 import Typing from './components/Typing';
 import Portfolio from './components/Portfolio';
+import Services from './components/Services';
 
 const App: React.FC = () => {
 
@@ -18,6 +19,7 @@ const App: React.FC = () => {
           <Competences />
           <Parcours />
           <Portfolio />
+          <Services />
         </div>
     </div>
   )
