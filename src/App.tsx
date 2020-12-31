@@ -6,6 +6,7 @@ import Parcours from './components/Parcours';
 import Typing from './components/Typing';
 import Portfolio from './components/Portfolio';
 import Services from './components/Services';
+import Contact from './components/Contact';
 
 const App: React.FC = () => {
 
@@ -20,6 +21,7 @@ const App: React.FC = () => {
           <Parcours />
           <Portfolio />
           <Services />
+          <Contact />
         </div>
     </div>
   )
