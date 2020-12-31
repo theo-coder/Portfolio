@@ -16,7 +16,6 @@ const Contact: React.FC = () => {
 
     const handleSubmit = (e: any) => {
         e.preventDefault();
-        // console.log(process.env.BACK_URI + "/send")
         axios.post(process.env.REACT_APP_BACK_URI + '/send', {
             firstName,
             lastName,
