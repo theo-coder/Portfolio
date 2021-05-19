@@ -192,38 +192,53 @@ html {
 } */
 
 .portfolioItem {
+  position: relative;
   height: 275px;
   width: 275px;
-  background: url("https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png")
-    center center / cover;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  text-align: center;
   text-transform: uppercase;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  transition: opacity 1s;
 }
-.portfolioItem > div {
-  background-color: rgba(0, 0, 0, 0.4);
-  width: 100%;
-  font-size: 15px;
-  word-break: keep-all;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  text-decoration: none;
+.portfolioItem span {
+  margin-bottom: 0;
+}
+.portfolioItem img {
+  height: auto;
+  width: auto;
+  max-height: 250px;
+  max-width: 250px;
+}
+.portfolioItem p {
+  opacity: 0;
+  height: 0;
+  font-size: 0;
+  width: 0;
+  transition: opacity 0.5s, height 0.5s, width 0.5s;
+}
+.portfolioItem:hover p {
+  font-size: 1em;
+  opacity: 1;
+  height: auto;
+  width: auto;
+  position: absolute;
+  bottom: 0;
+  background-color: #414141;
+  padding: 10px 20px;
+}
+.portfolioItem:hover span {
+  display: none;
 }
 #portfolio > div {
   display: grid;
   grid-template-columns: 1fr;
+  row-gap: 50px;
 }
 #portfolio {
   padding-right: 30px;
-}
-#portfolio .container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 20px 0;
 }
 #portfolio a {
   text-decoration: none;

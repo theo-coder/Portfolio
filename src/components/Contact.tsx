@@ -1,50 +1,54 @@
-import React, { useState } from 'react'
-import axios from 'axios'
+import React from "react";
+// import axios from "axios";
 
 const Contact: React.FC = () => {
+  //   const [lastName, setLastName] = useState("");
+  //   const [firstName, setFirstName] = useState("");
+  //   const [email, setEmail] = useState("");
+  //   const [subject, setSubject] = useState("");
+  //   const [messageHtml, setMessageHtml] = useState("");
 
-    const [lastName, setLastName] = useState("")
-    const [firstName, setFirstName] = useState("")
-    const [email, setEmail] = useState("");
-    const [subject, setSubject] = useState("");
-    const [messageHtml, setMessageHtml] = useState("");
+  //   const headers = {
+  //     "Content-Type": "application/json",
+  //     "Access-Control-Allow-Origin": "*",
+  //     "Access-Control-Allow-Headers": "X-Requested-With,content-type",
+  //     "Access-Control-Allow-Methods": "GET, POST, OPTIONS, PUT, PATCH, DELETE",
+  //     "Access-Control-Allow-Credentials": true,
+  //   };
 
+  //   const handleSubmit = (e: React.FormEvent) => {
+  //     e.preventDefault();
+  //     axios
+  //       .post(
+  //         process.env.REACT_APP_BACK_URI + "/send",
+  //         {
+  //           firstName,
+  //           lastName,
+  //           email,
+  //           subject,
+  //           messageHtml,
+  //         },
+  //         { headers }
+  //       )
+  //       .then((res) => {
+  //         if (res.data.msg === "success") {
+  //           alert("Message envoyé !");
+  //           setLastName("");
+  //           setFirstName("");
+  //           setEmail("");
+  //           setSubject("");
+  //           setMessageHtml("");
+  //         } else if (res.data.msg === "fail") {
+  //           console.log(res);
+  //           alert("Erreur d'envoi du message, veuillez réessayer plus tard");
+  //         }
+  //       });
+  //   };
 
-    const headers = {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Headers': 'X-Requested-With,content-type',
-        'Access-Control-Allow-Methods': 'GET, POST, OPTIONS, PUT, PATCH, DELETE',
-        'Access-Control-Allow-Credentials': true
-    }
-
-    const handleSubmit = (e: any) => {
-        e.preventDefault();
-        axios.post(process.env.REACT_APP_BACK_URI + '/send', {
-            firstName,
-            lastName,
-            email,
-            subject,
-            messageHtml
-        }, { headers }).then((res) => {
-            if (res.data.msg === 'success') {
-                alert('Message envoyé !')
-                setLastName('')
-                setFirstName('')
-                setEmail('')
-                setSubject('')
-                setMessageHtml('')
-            } else if (res.data.msg === 'fail') {
-                console.log(res)
-                alert('Erreur d\'envoi du message, veuillez réessayer plus tard')
-            }
-        })
-    }
-
-    return (
-        <div id="contact">
-            <h1>Contact</h1>
-            <form className="contactForm" onSubmit={(e) => handleSubmit(e)}>
+  return (
+    <div id="contact">
+      <h1>Contact</h1>
+      {/* <form className="contactForm" onSubmit={(e) => handleSubmit(e)}>
                 <input
                     required
                     type='text'
@@ -85,9 +89,10 @@ const Contact: React.FC = () => {
                     onChange={(e: any) => setMessageHtml(e.target.value)}
                 />
                 <button type='submit'>Envoyer</button>
-            </form>
-        </div>
-    )
-}
+            </form> */}
+      Coming soon ...
+    </div>
+  );
+};
 
 export default Contact;
