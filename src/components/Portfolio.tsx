@@ -31,13 +31,13 @@ const Portfolio: React.FC = () => {
     },
     {
       name: "[SIO] Muscu - React",
-      url: "https://github.com/theo-coder/SalleDeSport-Mission2-API",
+      url: "https://github.com/theo-coder/SalleDeSport-Mission2-React",
       description: "Projet BTS SIO 2ème année - React",
       image: "dumbbell.png",
     },
     {
       name: "[SIO] Muscu - Symfony, Twig",
-      url: "https://github.com/theo-coder/SIO2-SalleDeSport",
+      url: "https://salledesport.posty.fr",
       description: "Projet BTS SIO 2ème année - Symfony + Twig",
       image: "dumbbell.png",
     },
@@ -61,6 +61,20 @@ const Portfolio: React.FC = () => {
       description:
         "Développement d'un jeu d'échec avec le framework React, et le language typescript",
       image: "queen.png",
+    },
+    {
+      name: "Discord Pronote",
+      url: "https://github.com/theo-coder/Pronote-client-for-discord-webhook",
+      description:
+        "Envoyer des webhook quand des messages ou devoirs pronote sont réceptionnés",
+      image: "pronote.png",
+    },
+    {
+      name: "Discord Gmail",
+      url: "https://github.com/theo-coder/gmail-webhooks",
+      description:
+        "Envoyer des webhook quand des mails sont réceptionnés de certaines adresses ou groupes",
+      image: "gmail.png",
     },
   ];
 

@@ -47,7 +47,7 @@ const parcoursList = {
     {
       title: "BattleDev",
       description: "Participation à BattleDev HelloWork",
-      date: "11/19 - 03/20",
+      date: "11/19 - 03/20 - 06/21",
     },
   ],
   Formations_en_ligne: [
